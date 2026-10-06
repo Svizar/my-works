@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Регисторация</title>
+
+<style>
+body {
+    display: flex;
+    justify-content:center;
+}
+
+    .forma {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(236, 236, 236);
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 40rem;
+        align-items: left;
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 1px black solid;
+         box-shadow: 8px 5px 8px rgba(255, 0, 0, 0.2);
+    }
+
+    .forma label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .forma input{
+        padding: 0.4rem;
+        width: 10rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+
+   button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    
+<form class="form">
+
+    <div class="forma">
+        <label for="login">Логин
+        <input type="text" id="name" name="name"></label>
+        <label for="sublogin">Короткое имя
+        <input type="text" id="sublogin" name="sublogin"></label>
+        <label for="password">Пароль
+        <input type="text" id="name" name="name"></label>
+    </div>
+
+    <button type="submit">Отправить</button>
+
+</form>
+
+</body>
+</html>
