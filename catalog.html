@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+
+  body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif; 
+   
+  }
+  
+  header {
+    background: #1f1f30;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(135deg, #3a3a5c, #2e4272, #1f5fa0, #7d4fb8);
+
+
+  }
+  
+  .logo { color: #fff; font-size: 22px; font-weight: 700; }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .burger span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .nav a {
+    color: #b8b8c8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  .nav a:hover { color: #667eea; }
+  
+  @media (max-width: 768px) {
+    .burger { display: flex; }
+    
+    .nav {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #16213e;
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+      transform: translateY(-150%);
+      transition: transform 0.3s;
+    }
+    
+    .nav.open { transform: translateY(0); }
+    
+    .burger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  .label-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-decoration: underline;
+    align-items: center;
+    padding: 5px 5px 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px inset rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
+  }
+
+   .forma {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(236, 236, 236);
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 40rem;
+        align-items: left;
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 1px black solid;
+        box-shadow: 8px 5px 8px rgba(119, 119, 119, 0.2);
+    }
+
+    .forma label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .forma input{
+        padding: 0.4rem;
+        width: 10rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+
+   button[type="submit"] {
+    display: block;
+    width: 60%;
+    padding: 12px;
+    margin: 20px auto 0 auto;
+    margin-top: 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-foto {
+    height: 250px;
+    width: 650px;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">MySite</div>
+    <button class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Портфолио</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </header>
+
+<main>
+
+    <div class="card">
+
+        <div class="card-foto">
+            <img src="домашний.png">
+        </div>
+
+        <div class="card-description">fff</div>
+        <button class="card-button">Чето там</button>
+    </div>
+
+</main>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.burger').classList.toggle('active');
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

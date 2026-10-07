@@ -4,15 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', sans-serif; }
+  * { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+
+  body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif; 
+   
+  }
   
   header {
-    background: #1a1a2e;
+    background: #1f1f30;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(135deg, #3a3a5c, #2e4272, #1f5fa0, #7d4fb8);
+
+
   }
   
   .logo { color: #fff; font-size: 22px; font-weight: 700; }
@@ -78,6 +101,19 @@
     }
   }
 
+  .label-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-decoration: underline;
+    align-items: center;
+    padding: 5px 5px 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px inset rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
+  }
+
    .forma {
         display: flex;
         flex-direction: column;
@@ -89,7 +125,7 @@
         justify-content: space-between;
         border-radius: 5px;
         border: 1px black solid;
-         box-shadow: 8px 5px 8px rgba(255, 0, 0, 0.2);
+        box-shadow: 8px 5px 8px rgba(119, 119, 119, 0.2);
     }
 
     .forma label {
@@ -107,8 +143,10 @@
     }
 
    button[type="submit"] {
-    width: 100%;
+    display: block;
+    width: 60%;
     padding: 12px;
+    margin: 20px auto 0 auto;
     margin-top: 20px;
     background-color: #2196F3;
     color: white;
@@ -133,7 +171,17 @@
     </ul>
   </header>
 
+<main>
+
+  
+    
+  </div>
+
   <form class="form">
+
+    <div class="label-form">
+    <p>Форма регистрации</p>
+  </div>
 
     <div class="forma">
         <label for="login">Логин
@@ -147,6 +195,8 @@
     <button type="submit">Отправить форму</button>
 
 </form>
+
+</main>
 
   <script>
     function toggleMenu() {
