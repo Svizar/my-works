@@ -156,18 +156,77 @@
     cursor: pointer;
 }
 
+.wrapper_cards {
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Отступ между карточками */
+  padding: 30px;
+  border-radius: 12px;
+  flex-wrap: wrap; /* Чтобы карточки переносились на новую строку на узких экранах */
+  
+  /* Исправленная тень для обертки */
+  box-shadow: 0 4px 15px rgba(125, 79, 184, 0.3); 
+}
+
 .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px; /* Лучше min-height, чтобы контент не обрезался, если текст длинный */
+  width: 200px;
+  padding: 10px;
+  background-color: palevioletred;
+  border-radius: 12px; /* Скругленные углы */
+  
+  /* Тень для самой карточки, чтобы она "парела" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  
+  /* Меняем цвет текста на белый для контраста с розовым фоном */
+  color: #ffffff; 
+  
+  /* Плавная анимация при наведении */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
-.card-foto {
-    height: 250px;
-    width: 650px;
+/* Эффект при наведении на карточку */
+.card:hover {
+  transform: translateY(-5px); /* Карточка немного приподнимается */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.card_foto {
+  height: 200px;
+  width: 180px;
+  border-radius: 8px;
+  overflow: hidden; /* Обрезаем картинку, если она вылезает за скругленные углы */
+  background-color: #fff; /* Фон на случай, если картинка не загрузится */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 👈 Changed from cover to contain */
+  display: block;
+}
+
+.card_title {
+  margin: 10px 0 5px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card_info {
+  padding-top: 5px;
+  font-size: 14px; /* Чуть уменьшил, чтобы текст смотрелся аккуратнее */
+  color: #ffffff; /* Белый текст */
+  text-align: center;
+  line-height: 1.4; /* Межстрочный интервал для удобства чтения */
+  margin: 0; /* Убираем стандартные отступы параграфа */
+}
 </style>
 </head>
 <body>
@@ -186,15 +245,36 @@
 
 <main>
 
-    <div class="card">
-
-        <div class="card-foto">
-            <img src="домашний.png">
-        </div>
-
-        <div class="card-description">fff</div>
-        <button class="card-button">Чето там</button>
+<div class="wrapper_cards">
+  
+  <!-- Карточка 1 -->
+  <div class="card">
+    <div class="card_foto">
+      <img src="1.png" alt="1 foto" title="1 foto">
     </div>
+
+    <h2 class="card_title">Axe</h2>
+
+    <div class="card_info">
+      <p>This is a cool axe for enjoying your doing</p>
+    </div>
+  </div>
+
+  <!-- Карточка2 -->
+  <div class="card">
+    <div class="card_foto">
+      <img src="2.png" alt="2 foto" title="2 foto">
+    </div>
+    <h2 class="card_title">Pliers</h2>
+    <div class="card_info">
+      <p>That new pliers from Gamburg for You!</p>
+    </div>
+  </div>
+
+</div>
+
+
+  
 
 </main>
 
