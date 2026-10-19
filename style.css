@@ -1,0 +1,309 @@
+  * { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    overflow-wrap: break-word;
+  }
+  
+ p {
+    text-indent: 25px; /* Размер отступа перв стр */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif; 
+   
+  }
+  
+  header {
+    background: #1f1f30;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(135deg, #3a3a5c, #2e4272, #1f5fa0, #7d4fb8);
+
+
+  }
+  
+  .logo { color: #fff; font-size: 22px; font-weight: 700; }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .burger span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .nav a {
+    color: #b8b8c8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  .nav a:hover { color: #667eea; }
+  
+  @media (max-width: 768px) {
+    .burger { display: flex; }
+    
+    .nav {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #16213e;
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+      transform: translateY(-150%);
+      transition: transform 0.3s;
+    }
+    
+    .nav.open { transform: translateY(0); }
+    
+    .burger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  .label-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-decoration: underline;
+    align-items: center;
+    padding: 5px 5px 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px inset rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
+  }
+
+   .forma {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(236, 236, 236);
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 40rem;
+        align-items: left;
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 1px black solid;
+        box-shadow: 8px 5px 8px rgba(119, 119, 119, 0.2);
+    }
+
+    .forma label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .forma input{
+        padding: 0.4rem;
+        width: 10rem;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+
+   button[type="submit"] {
+    display: block;
+    width: 60%;
+    padding: 12px;
+    margin: 20px auto 0 auto;
+    margin-top: 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrapper_cards {
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Отступ между карточками */
+  padding: 30px;
+  border-radius: 12px;
+  flex-wrap: wrap; /* Чтобы карточки переносились на новую строку на узких экранах */
+  
+  /* Исправленная тень для обертки */
+  box-shadow: 0 4px 15px rgba(125, 79, 184, 0.3); 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px; /* Лучше min-height, чтобы контент не обрезался, если текст длинный */
+  width: 200px;
+  padding: 10px;
+  background-color: palevioletred;
+  border-radius: 12px; /* Скругленные углы */
+  
+  /* Тень для самой карточки, чтобы она "парела" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  
+  /* Меняем цвет текста на белый для контраста с розовым фоном */
+  color: #ffffff; 
+  
+  /* Плавная анимация при наведении */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+/* Эффект при наведении на карточку */
+.card:hover {
+  transform: translateY(-5px); /* Карточка немного приподнимается */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card_foto {
+  height: 200px;
+  width: 180px;
+  border-radius: 8px;
+  overflow: hidden; /* Обрезаем картинку, если она вылезает за скругленные углы */
+  background-color: #fff; /* Фон на случай, если картинка не загрузится */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 👈 Changed from cover to contain */
+  display: block;
+}
+
+.card_title {
+  margin: 10px 0 5px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card_info {
+  padding-top: 5px;
+  font-size: 14px; /* Чуть уменьшил, чтобы текст смотрелся аккуратнее */
+  color: #ffffff; /* Белый текст */
+  text-align: center;
+  line-height: 1.4; /* Межстрочный интервал для удобства чтения */
+  margin: 0; /* Убираем стандартные отступы параграфа */
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.index-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    max-width: 800px;
+}
+
+.index-wrapper-tittle {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.index-wrapper-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #bebebe;
+    padding: 10px 10px 10px 10px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px 0  #3a3a5c;
+    
+}
+
+.index-wrapper-hr {
+    margin-top: 20px;
+    width: 50%;
+    color: black;
+    border: 1px solid black;
+}
+
+.single-card-wrapper {
+  display: flex;
+  flex-direction: row; 
+  max-width: 840px;
+  background-color: #d1d1d1;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  gap: 30px;
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.single-card-image-wrapper {
+  display: flex;      /* Центрируем картинку, если она меньше блока */
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 300px;       
+  height: 200px;              
+  border-radius: 8px; 
+  overflow: hidden;   
+  flex-shrink: 0;     /*!!!!!!!!!!!!!1 Запрещаем блоку сжиматься, если текста много!!!!!!!!!!!!!! */
+}
+
+.single-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.single-card-max-descripton {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #d1d1d1; /* Возвращаем серый фон */
+  padding: 20px;              /* Внутренние отступы для текста */
+  border-radius: 5px;         /* Скругляем углы */
+  box-shadow: 5px 5px 5px 0 #3a3a5c; /* Тень, как у других блоков */
+}
