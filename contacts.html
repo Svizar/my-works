@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая форма</title>
+    <style>
+        
+        .form-container {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin-top: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+        }
+    </style>
+</head>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+ 
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Giga Siga</div>
+    <button class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Услуги</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </header>
+
+<main>
+
+    <div class="index-wrapper">
+
+        <div class="contact-wrapper-tittle" >
+        <h1>Diga Siga</h1>
+        </div>
+    </div>
+
+
+
+<div class="form-container">
+    <h2>Связь с нами</h2>
+    <form action="#" method="post">
+        <!-- Поле Имя -->
+        <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+        </div>
+
+        <!-- Поле Номер телефона -->
+        <div class="form-group">
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00" required>
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+<hr class="hr-contacts">
+
+            <h2>Где и как нас найти?</h2>
+            <h3>В Барнауле</h3>
+            <p>ул. Взлетная 47</p>
+            <p>ул. Власихинская 28</p>
+            <p>ул. Льва Толстого 12<p>
+            <h3>В Новосибирске</h3>
+            <p>пр-т Красный 318</p>
+            <p>ул. Дуси Ковальчук 210В</p>
+            <h3>Номер для связи</h3>
+            <p>8 996 889 66 96</p>
+        </div>
+
+</div>
+
+</main>
+
+<footer>
+    <div class=""></div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.burger').classList.toggle('active');
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

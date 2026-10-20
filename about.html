@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+ 
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Giga Siga</div>
+    <button class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Услуги</a></li>
+      <li><a href="about.html">Портфолио</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </header>
+
+<main>
+
+    <div class="index-wrapper">
+
+        <div class="index-wrapper-tittle">
+        <h1>Diga Siga</h1>
+        </div>
+
+        <div class="index-wrapper-description">
+            <h2>О нас:</h2>
+            <p>      Мы занимаемся установкой Автосигнализаций в Барнауле как локально в наших салонах,
+                 так и работаем на выезд. В настоящее время мы расширяемся и находим наших клиентов в других городах.
+                 К примеру сейчас в Новосибирске уже 2 точки обслуживания клиентов. Первая точка выступает
+                 складом для для хранения твоей будующей сигнализации, в которой ты можешь ознакомиться с приемуществами 
+                 современной защиты авто и установить ее прямо там. Третяя точка будет выступать показательно-презентационной 
+                 в назначенные даты, где каждый сможет увидеть на презентации весь функционал, а при желании и стать <strong>ПАРТНЕРОМ</strong>
+                  Giga Siga!
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class=""></div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.burger').classList.toggle('active');
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

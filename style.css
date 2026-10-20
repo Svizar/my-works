@@ -307,3 +307,9 @@
   border-radius: 5px;         /* Скругляем углы */
   box-shadow: 5px 5px 5px 0 #3a3a5c; /* Тень, как у других блоков */
 }
+
+.hr-contacts {
+  color: black;
+  margin: 10px;
+  margin-bottom: 5px;
+}
